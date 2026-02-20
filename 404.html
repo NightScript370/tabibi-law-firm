@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" id="meta-zoom" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+
+		<title>Error 404 | זמני יוסף</title>
+		<meta name="description" content="The online Zemanim (Halachic Times) calendar according to Rabbi Ovadiah Yosef Zt'l for everywhere in the world." />
+		<meta name="keywords" content="Shema, Amidah, Hatzot, Midday, Plag, Mincha, Misheyakir, Alot Hashachar, Maran, Shulchan Aruch, Ben Ish Hai, Ohr Letzion, Rambam, Maimonides, Rabbi, Ovadia, Ovadiah, Yosef, Calendar, Zmanim, Daven, Davening, Zemaneh, Zemanim, זמנים, זמני, יוסף, zmanei yosef" />
+		<meta name="mobile-web-app-capable" content="yes" />
+
+		
+		<link id="bs" href="/assets/libraries/bootstrap/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+		<link id="mdb" href="/assets/libraries/mdbootstrap/out.css" rel="stylesheet" crossorigin="anonymous"/>
+		<link rel="stylesheet" href="/assets/libraries/forkAwesome/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+		<link rel="stylesheet" href="/assets/css/core.css" />
+		<link rel="stylesheet" href="/assets/css/style.css" />
+		<link rel="stylesheet" media="print" href="/assets/css/print.css" />
+		<link href="/favicon.ico" rel="icon" type="image/x-icon" />
+		<link rel="manifest" href="/manifest.json" />
+	</head>
+	<body class="d-flex">
+		<div class="modal fade" id="unsupportedModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="unsupportedModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="unsupportedModalLabel">Not Supported | אינו נתמך</h1>
+        </div>
+        <div class="modal-body">
+          Sorry, our website is not compatible with your browser. Please update to the latest version of either Google Chrome, Microsoft Edge, Mozilla Firefox or Safari to use our site.
+          <hr>
+          מצטערים, האתר שלנו אינו תואם לדפדפן שלך. אנא עדכן לגרסה העדכנית ביותר של Google Chrome, Microsoft Edge, Mozilla Firefox או Safari כדי להשתמש באתר שלנו.
+        </div>
+      </div>
+    </div>
+  </div>
+		<script src="/assets/libraries/supValuesOf.js"></script>
+		<script src="/assets/js/settings/docLoadBlock.js"></script>
+		<div class="d-none d-lg-flex flex-column flex-shrink-0" id="sidebar">
+			<a href="/" id="sidebarLogo" class="link-body-emphasis text-decoration-none" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Zemaneh Yosef - Rabbi Ovadiah Yosef Calendar">
+				<img src="/assets/images/icon-text.png" alt="Zemaneh Yosef Icon" style="width: 100%">
+			</a>
+			<ul class="nav nav-pills nav-flush flex-column mt-auto text-center">
+				<li>
+					<a href="https://chat.whatsapp.com/GzDPMTQQzSm0V7hux8X4Ue" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="WhatsApp Community" data-bs-original-title="WhatsApp Community">
+						<i class="fa fa-whatsapp"></i>
+					</a>
+				</li>
+				<li>
+					<a href="https://elyahu41.github.io/RabbiOvadiahYosefCalendar/moladCalculator.html" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Molad Calculator" data-bs-original-title="Molad Calculator">
+						<i class="fa fa-moon-o fa-fw"></i>
+					</a>
+				</li>
+				<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Mobile App Download">
+					<a class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="modal" data-bs-target="#mobileModal">
+						<i class="fa fa-mobile fa-fw"></i>
+					</a>
+				</li>
+				<li id="downloadModalBtn" class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Download (SLOW!!!)" style="display: none">
+					<a class="nav-link py-3 border-bottom rounded-0" aria-label="Download the page">
+						<i class="fa fa-download fa-fw"></i>
+					</a>
+				</li>
+				<li class="nav-item" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Settings">
+					<a class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="modal" data-bs-target="#settingsModal">
+						<i class="fa fa-cogs fa-fw"></i>
+					</a>
+				</li>
+			</ul>
+			<div class="dropdown border-top">
+				<a href="#" class="d-flex align-items-center justify-content-center p-3 link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					<i class="fa fa-question-circle" aria-hidden="true"></i>
+				</a>
+				<ul class="dropdown-menu text-small shadow">
+					<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#aboutModal">
+						<span class="lang lang-hb">על אודות</span>
+						<span class="lang lang-et">About</span>
+						<span class="lang lang-en">About</span>
+					</a></li>
+					<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#creditModal">
+						<span class="lang lang-hb">נקודות זכות</span>
+						<span class="lang lang-et">Credits</span>
+						<span class="lang lang-en">Credits</span>
+					</a></li>
+					<li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#haskamotModal">
+						<span class="lang lang-hb">השקמות</span>
+						<span class="lang lang-et">Haskamot</span>
+						<span class="lang lang-en">Approbations</span>
+					</a></li>
+					<li><hr class="dropdown-divider"></li>
+					<li><a class="dropdown-item" href="https://github.com/elyahu41/royzmanimwebsite">Source Code</a></li>
+				</ul>
+			</div>
+		</div>
+		<div style="flex: 1 1;">
+			<header class="navbar d-lg-none mb-1">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="/">
+						<img id="logoNavbar" src="/assets/images/logo.png" alt="Link to the Home Page"/>
+					</a>
+					<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<nav class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="text-align: end;">
+							<li class="nav-item">
+								<a class="nav-link" href="https://elyahu41.github.io/RabbiOvadiahYosefCalendar/moladCalculator.html" target="_blank">
+									<span class="lang lang-hb">לוח של מולד</span>
+									<span class="lang lang-et">Molad Calendar</span>
+									<span class="lang lang-en">New-Moon Calendar</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-bs-toggle="modal" data-bs-target="#settingsModal">
+									<span class="lang lang-hb">תְצוּרָה</span>
+									<span class="lang lang-et">Settings</span>
+									<span class="lang lang-en">Settings</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-bs-toggle="modal" data-bs-target="#aboutModal">
+									<span class="lang lang-hb">על אודות</span>
+									<span class="lang lang-et">About</span>
+									<span class="lang lang-en">About</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-bs-toggle="modal" data-bs-target="#creditModal">
+									<span class="lang lang-hb">נקודות זכות</span>
+									<span class="lang lang-et">Credits</span>
+									<span class="lang lang-en">Credits</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-bs-toggle="modal" data-bs-target="#haskamotModal">
+									<span class="lang lang-hb">השקמות</span>
+									<span class="lang lang-et">Haskamot</span>
+									<span class="lang lang-en">Approbations</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<main class="maxWidthContainer mt-2">
+				<h1 id="404---page-not-found">404 - Page not found</h1>
+
+<p>The page on the website you tried to access is inaccessible, because it does not exist.</p>
+
+<ul>
+  <li>Return to the <a href="/">Home Page</a></li>
+  <li><a onclick="window.history.back()">Go back</a> to the previous page.</li>
+</ul>
+
+			</main>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade modal-xl" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="aboutModalLabel">About Our Website</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Welcome to the זמני יוסף website, where we calculate Halachic times based on the teachings of HaRav Ovadia Yosef ZT”L and other Sepharadic leaders for each user according to their location. Beyond relying on what he’s written throughout his Sefarim (quoted in the description of each time slot), our reported times can match either of the two following calendars:</p>
+
+<ul>
+  <li>The <strong>Ohr Hachaim</strong> calendar was made by <em>Rabbi Shelomo Benizri</em> of Yeshivat “Ohr Hachaim”. This is the calendar Maran zt”l used in Israel, as well as what R’ Yitzhak Yosef says to use outside Eretz Yisrael (עין יצחק ג’ דף ר”ל).</li>
+  <li>The <strong>Amudeh Horaah</strong> calendar was made for places outside Eretz Yisrael by <em>Rabbi Leeor Dahan</em>, author of the Mishnah Berurah commentary of that same name. These use adjusted-seasonal minutes for dawn/night-based Halachic times, as an interpretation of R’ David Yosef’s Halacha Berurah (סימן רס”א ה’ י”ג).</li>
+</ul>
+
+<p>Calculations found on our platform (website and app) are typically more precise for specific geocoordinates than PDFs that need to account for a town as a whole. We benefit from this by introducing a <strong>visible sunrise</strong> option, which needs to be as precise as 2-8km. (More information on that can be found in the description for sunrise)</p>
+<ul>
+  <li>Calendars using the outdated USNO algorithm will always be <a href="https://github.com/KosherJava/zmanim/commit/b69dc31cf041279523fc9a4a6ac06912736487bb">inaccurate</a>. With its newer version being closed-sourced (and thus inaccessible to any calendar), we instead use the NOAA algorithm.</li>
+  <li>Although we <em>technically</em> calculate down to nanosecond level, we only guarantee reliability to the minutes since seconds and beyond are <strong>unreliable</strong> for practical use.</li>
+</ul>
+
+<p>Descriptions included with each halachic time come with the relevant sources on how to calculate them as well as explanations of the halachic position. Our terminology usage should be accessible to anyone looking to learn more on the matter, regardless of ethnic background (for Ashkenazim) or alternative approaches to the subject (including those who haven’t learned it at all).</p>
+<ul>
+  <li>Our sources are pulled primarily from Rabbi Ovadia’s teachings and the system he based himself on, including the three Amudeh Horaah’s (Rambam, Rif &amp; Rosh), R Yosef Cairo’s works (Bet Yosef &amp; Shulḥan Arukh) as well as books written by Rabbi Ovadia and correspondents themselves. Although they can be found throughout the relevant responsa’s, they have been compiled in the הוראה ברורה section of Rabbi Leeor Dahan’s משנה ברורה: עמידי הוראה III. In addition, they have been summarized for the introduction to Siman 261 in R’ David Yosef’s הלכה ברורה.</li>
+  <li>The codebase we wrote based on these teachings is fully open-source, hosted on our <a href="https://github.com/Elyahu41/royzmanimwebsite">GitHub repository</a>.</li>
+</ul>
+</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-xl" id="creditModal" tabindex="-1" aria-labelledby="creditModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="aboutModalLabel">Credits</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<h3 id="זמני-יוסף-project">זמני יוסף Project</h3>
+
+<ul>
+  <li><strong>Elyahu Jacobi:</strong> Lead Programmer, App Designer &amp; Halachic Ohr Hachaim calendar implementation</li>
+  <li><strong>Maor Na’im:</strong> Website maintainer, initial עמודי הוראה implementation, made print-out calendar &amp; TVs</li>
+</ul>
+
+<p>The Rabbis who gave their Haskamot have also contributed to the app. Their credits are listed right next to their Haskamot on either the Haskamot modal or on the bottom of the landing.</p>
+
+<h3 id="external-api-credits">External API Credits</h3>
+
+<ul>
+  <li><strong>ChaiTables Website:</strong> Accurate Netz timings based on GeoLocation</li>
+  <li><strong>GeoNames Website:</strong> Location meta-data search API</li>
+  <li><strong>OpenStreetsMap:</strong> Map used together with leftlet.js in the location modal</li>
+</ul>
+
+<h3 id="perfered-dependencies-credits">Perfered-Dependencies Credits</h3>
+
+<ul>
+  <li><strong><a href="https://github.com/forzagreen/n2words">n2words</a>:</strong> Used to generate Beracha-accurate Hebrew Sefira text</li>
+  <li><strong>KosherJava (Eliyahu Hershfeld):</strong> Framework to calculate Zemanim, written in Java
+    <ul>
+      <li><strong>KosherZmanim (Aryeh Berman):</strong> Initial port to TS. The code has been greatly modified since, but we still have Hakarat Hatov</li>
+    </ul>
+  </li>
+  <li><strong>Bootstrap:</strong> Web Framework to make initial components
+    <ul>
+      <li><strong><a href="https://mdbootstrap.com/">mdbootstrap</a>:</strong> Implementing Google’s Design Language into Bootstrap</li>
+    </ul>
+  </li>
+  <li><strong><a href="https://leafletjs.com/">leftlet.js</a>:</strong> Map library used in the location modal</li>
+</ul>
+
+<h5 id="mandated-dependencies-credits">Mandated-Dependencies Credits</h5>
+
+<ul>
+  <li><strong><a href="https://github.com/dwachss/flexcal">flexcal</a>:</strong> A jQuery(-UI) plugin to have a Hebrew-Date picker. To be replaced with a custom implementation built around KosherZmanim</li>
+  <li><strong><a href="https://m3.material.io/develop/web">Material Design Web</a>:</strong> Replace MDBootstrap’s list selector, due to MDBootstrap’s being paid.</li>
+  <li><strong><a href="https://mozilla.github.io/pdf.js/">pdf.js</a>:</strong> Embedded PDF viewer, because native ones either force the person to download the PDF on page-load or have issues scrolling</li>
+</ul>
+
+<h5 id="flyer-work">Flyer work</h5>
+
+<ul>
+  <li><strong>Adriel Kohananoo</strong> - Flyer Designs</li>
+  <li><strong>Joshua Nektalov</strong>, <strong>Haim Shaul Niyazov</strong> - Russian transliteration (Shabbat Flyer for Sefira)</li>
+  <li><strong>Aharon N. Varady</strong> and <strong>Andrew Meit</strong> - <a href="https://opensiddur.org/?p=3393">Menorah Lamnatzeach</a> (under the Creative Commons Attribution-ShareAlike (CC BY-SA) 4.0 International copyleft license)</li>
+</ul>
+</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade modal-xl" id="haskamotModal" tabindex="-1" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">Haskamot / Approbations</h3>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<h4>Rabbi Leeor Dahan</h4>
+                <p>As the creator of the עמודי הוראה calendar, it is reasonable he would want his calendar to be represented accurately. Beyond his extensive documentation found at the end of his commentary on the משנה ברורה's 3<sup>rd</sup> volume, he was also very explanative of his opinions, especially when they differed from the לוח אור החיים (which is what our initial version only supported). Together, we have made a product that he could advertise, and it is included in the back of the 4<sup>th</sup> volume of his commentary on the משנה ברורה.</p>
+                <iframe src="/assets/libraries/pdfviewer/web/viewer.html?file=/assets/haskamah-he.pdf" allow="fullscreen" style="aspect-ratio: 16/9; width: 100%;" loading="lazy"></iframe>
+                <hr>
+                <h4>Rabbi Meir Gavriel Elbaz</h4>
+                <p>As a Talmid of Rabbi Ovadia Yosef in Yeshivath יחוה דעת, we felt we were getting the Halachot of Hacham Ovadia when we would ask him any halachic problem. With an expertee in עניני דיומא (as part of his work as the English Translator for <a href="https://halachayomit.co.il/en/default.aspx">Halacha Yomit</a>), every question would be answered with a level of expertees as if it were applicable on that very day. We are very priviledged to have him as our personal Posek, and may Hashem help him be the light onto the dear & pleasent nation.</p>
+                <iframe src="/assets/libraries/pdfviewer/web/viewer.html?file=/assets/haskamah-en.pdf" allow="fullscreen" style="aspect-ratio: 16/9; width: 100%;" loading="lazy"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="modal fade modal-xl" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <div class="modal-title">
+                <h3>Settings</h3>
+                <h6>These settings automatically save when they're changed and should be automatically reflected on the page.</h6>
+            </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="d-lg-flex">
+                <div style="flex: 1 1;">
+                    <h4>Methods of Calculations</h4>
+                    <ul>
+                        <li>The <strong>Amudeh Hora'ah</strong> Calendar based outside Eretz Yisrael was put together by Rabbi Leeor Dahan. It relies on the opinion of Minchat Cohen to modify the calculations based on how far north/south one is away from Israel. This opinion is quoted by Rabbi David Yosef in Halacha Brurah (Chelek 15, Siman 261, halacha 13).</li>
+                        <li>The <strong>Ohr Hachaim</strong> Calendar based in Eretz Yisrael was used by Hacham Ovadia himself. It uses elevation to account for the hill-based environment, but does not alter the timings based on how far north/south one is located away from Israel based on what Rabbi Shlomo Benizri claims to be a verbal instruction by Hacham Ovadia Yosef.</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="btn-group" id="calendarPsakSetter">
+                        <input type="radio" class="btn-check" name="calcMode" id="amudehHoraah" autocomplete="off" checked />
+                        <label class="btn btn-secondary" for="amudehHoraah">Amudeh Hora'ah</label>
+                      
+                        <input type="radio" class="btn-check" name="calcMode" id="ohrHachaim" autocomplete="off" />
+                        <label class="btn btn-secondary" for="ohrHachaim">Ohr Hachaim</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-lg-flex">
+                <div style="flex: 1 1;">
+                    <h4>Language Options</h4>
+                    <ul>
+                        <li><b>Hebrew:</b> עלות השחר, טלית ותפילין, etc...</li>
+                        <li><b>English - Transliterated:</b> Aloth Hashaḥar, Earliest Talit and Tefilin, etc...</li>
+                        <li><b>English:</b> Dawn, Earliest Talit and Tefilin, etc...</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="btn-group" id="languageSelector">
+                        <input type="radio" class="btn-check" name="language" id="hebrew" autocomplete="off" checked />
+                        <label class="btn btn-secondary" for="hebrew">Hebrew - עברית</label>
+
+                        <input type="radio" class="btn-check" name="language" id="enet" autocomplete="off" />
+                        <label class="btn btn-secondary" for="enet">English - Transliterated</label>
+
+                        <input type="radio" class="btn-check" name="language" id="enli" autocomplete="off" />
+                        <label class="btn btn-secondary" for="enli">English</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-lg-flex">
+                <div style="flex: 1 1;">
+                    <h4>Time format</h4>
+                    <ul>
+                        <li><b>24h:</b> A full 24 hour representation, used mainly outside the United States. Does not recept itself well with a watch.</li>
+                        <li><b>12h:</b> The day is split into two, with the first half being 12->1-11 with an AM label, while the inverse is true for PM. Typically used in American countries</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="btn-group" id="timeFormatter">
+                        <input type="radio" class="btn-check" name="timeformat" id="24h" autocomplete="off" checked />
+                        <label class="btn btn-secondary" for="24h">Full Clock</label>
+
+                        <input type="radio" class="btn-check" name="timeformat" id="12h" autocomplete="off" />
+                        <label class="btn btn-secondary" for="12h">AM/PM</label>
+                    </div>
+                </div>
+            </div>
+            <!-- <hr>
+            <div class="d-lg-flex">
+                <div style="flex: 1 1;">
+                    <h4>Seconds display</h4>
+                    <p>Due to potential variations in atmospheric conditions based on refractions (pressure, humidity, etc...), precision is guaranteed to be <b>unreliable</b> for per-second calculations. In extreme cases, they can cause discrepancies of up to two minutes.</p>
+                    <p>(All this applies to pure-NOAA calculations, which is what's used for all times by default. However, ChaiTables provided times are proven to be more accurate, whether by switching all calculations to their sea-level listed times [Israel Only] or visible sunrise)</p>
+                </div>
+                <div>
+                    <div class="btn-group" id="secondsShow">
+                        <input type="radio" class="btn-check" name="secondDisplay" id="onHoverSeconds" autocomplete="off" checked />
+                        <label class="btn btn-secondary" for="onHover">Hide (reveal on Hover)</label>
+
+                        <input type="radio" class="btn-check" name="secondDisplay" id="showSeconds" autocomplete="off" />
+                        <label class="btn btn-secondary" for="showSeconds">Show by default</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h4>Customizable Times</h4>
+            <div class="d-lg-flex">
+                <div style="flex: 1 1;">
+                    <p>For Erev Yom Tov & Erev Shabbath, this field allows you to specify a personal time for <strong>Candle Lighting</strong>. The time reported for candle lighting will be the time for shkiya minus however minutes specified above:</p>
+                    <ul>
+                        <li><b>15:</b> 3/4's of a "mil".</li>
+                        <li><b>18:</b> The complete shiur of a "mil". Application of this is based on the "Re'em"</li>
+                        <li><b>20:</b> The Re'em's shiur of a mil, combined with a rounding upwards for Tosefeth Shabbath.</li>
+                        <li><b>22:</b> Different measurement of how to calculate a complete mil.</li>
+                    </ul>
+                </div>
+                <div>
+                    
+                </div>
+            </div> -->
+        </div>
+      </div>
+    </div>
+</div>
+		
+		<div class="modal fade modal-xl" id="mobileModal" tabindex="-1" aria-labelledby="mobileModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h3 class="modal-title">Mobile App downloads</h3>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>Get <i>Zemanim</i> on the go with our mobile app, available for Android and iOS devices!</p>
+                <div style="text-align: center;">
+                    <a href="https://apps.apple.com/app/rabbi-ovadiah-yosef-calendar/id6448838987"><img src="/assets/images/app-store.png" style="width: 25%;" loading="lazy"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.EJ.ROvadiahYosefCalendar"><img src="/assets/images/google-play-store-8-1-73-apk.png" style="width: 25%;" loading="lazy"></a><br>
+                    <div class="d-flex justify-content-center mt-1" style="gap: 1rem; color: white;">
+                        <a href="https://apps.apple.com/app/rabbi-ovadiah-yosef-calendar/id6448838987" style="display: block; border-radius: .5rem; background: black; width: 25%; padding: .5rem;">
+                            <div style="border-radius: .5rem; background: white;">
+                                <img src="/assets/images/app-store.svg" style="width: 100%" loading="lazy">
+                            </div>
+                            App Store
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.EJ.ROvadiahYosefCalendar" style="display: block; border-radius: .5rem; background: black; width: 25%; padding: .5rem;">
+                            <div style="border-radius: .5rem; background: white;">
+                                <img src="/assets/images/play-store.svg" style="width: 100%" loading="lazy">
+                            </div>
+                            Play Store
+                        </a>
+                    </div>
+                </div>
+    		</div>
+    	</div>
+    </div>
+</div>
+		
+		
+		<script src="/assets/js/settings/docLoad.js" type="module"></script>
+		<script src="/assets/libraries/bootstrap/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

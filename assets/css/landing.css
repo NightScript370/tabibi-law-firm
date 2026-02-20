@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+#heroBanner {
+    background: url('/assets/banner.png');
+    background-position: center 20%;
+
+    display: grid;
+    align-items: end;
+    position: relative;
+
+    box-shadow: 0px 4px 12px 0 rgba(0,0,0,0.07),0 2px 4px rgba(0,0,0,0.05);
+}
+
+img#logo {
+    aspect-ratio: 3165/778;
+    position: fixed;
+    z-index: 1500;
+    transition: all 0.3s;
+    object-fit: contain;
+}
+
+#logo:not(.stepO) {
+    margin-left: 3vw;
+    width: 18vw;
+    top: .5em;
+    height: calc(18vw * 778 / 3165);
+}
+
+#logo.stepO {
+    margin-left: 5vw;
+    width: 12vw;
+    height: 3.5em;
+    top: .5em;
+}
+
+#fakeLogo {
+    width: 20vw; aspect-ratio: 3165/778;
+}
+
+.maxWidthHeader {
+	margin-left: auto;
+	margin-right: auto;
+	width: clamp(16rem, 90vw, 92.5rem);
+	max-width: unset;
+	padding: unset;
+}
+
+#contactUsModalBody {
+    --bs-modal-padding: 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (max-width: 991.98px) {
+
+    #logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #logo:not(.stepO):not(.stepTw):not(.stepTh):not(.stepF) {
+        width: 85vw;
+        height: calc(85vw * 778 / 3165);
+    }
+
+    #logo.stepO {
+        margin-left: 0;
+        width: 60vw;
+        height: calc(60vw * 778 / 3165);
+        top: 1em;
+    }
+
+    #logo.stepTw, #logo.stepTh {
+        margin-left: 0;
+        width: 42.5vw;
+        height: calc(42.5vw * 778 / 3165);
+        top: .5em;
+    }
+
+    #logo.stepF {
+        margin-left: 0;
+        width: 85vw;
+        height: 2.75em;
+    }
+
+    #fakeLogo {
+        width: 85vw;
+    }
+
+    #contactUsModalBody {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1.5fr;
+    }
+
+    #contactUsModalBody > iframe {
+        border-bottom-left-radius: var(--bs-modal-border-radius);
+    }
+}
+
+@media (min-width: 992px) {
+    #fakeLogo {
+        position: absolute;
+        align-self: start;
+    }
+    #heroBanner > .container {
+        display: grid;
+        grid-template-columns: 25vw 1fr;
+        height: 100%;
+        align-items: center;
+    }
+
+    #heroBanner .gElbaz {
+        align-self: end;
+        justify-self: center;
+        width: 20vw;
+        order: -1;
+    }
+
+    #teamImage {
+        order: -1;
+    }
+
+    #contactUsModalBody {
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: .5fr 1fr .5fr;
+    }
+
+    #contactUsModalBody > .card {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #contactUsModalBody > iframe {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+    }
+}
+
+:root {
+    --bs-emphasis-color-rgb: 255,255,255;
+}
+
+
+#subtitle {
+    font-size: 2.5rem;
+}
